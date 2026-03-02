@@ -71,10 +71,12 @@ $$
 **注意:** 这里 $\beta^L$ 和 $\gamma^R$ 都是 Sbox 输入端的差分, 即 $\beta^L$ 是第 r 轮的左侧输入差分, $\gamma^R$ 是第 r+1 轮的右侧输入差分.
 
 而这里连接的概率为:
+
 $$
 2^{-n} \times \#\{x \in \mathbb{F}_2^n \mid S(x) \oplus S(x \oplus \Delta_i) \oplus S(x \oplus \nabla_o) \oplus S(x \oplus \Delta_i \oplus \nabla_o) = 0\}.
 $$
+
 最终 FBCT 的定义为:
 
-<img width="990" height="131" alt="image" src="https://github.com/user-attachments/assets/1dc37d27-18a2-45b6-97d1-9d8a437316dc" />
+<img width="1785" height="219" alt="image" src="https://github.com/user-attachments/assets/a0a3db91-e39b-4ab0-9144-7d4bb7462e62" />
 
