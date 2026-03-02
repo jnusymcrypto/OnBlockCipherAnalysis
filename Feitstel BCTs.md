@@ -27,6 +27,7 @@ Some information and knowledge about Feistel BCTs
 现在分别考虑在 ③ ④ 上分别**满足**差分 $\beta^L$ 和 $\beta^R$:
 
 * 对 $\beta^L$, 需要满足 $L_3\oplus L_4=\beta^L$, 这个推导是直接的, 不需要额外的条件:
+* 
 $$
 L^3 \oplus L^4 = (L^3 \oplus L^1) \oplus (L^1 \oplus L^2) \oplus (L^2 \oplus L^4)
 = \gamma^R \oplus \beta^L \oplus \gamma^R = \beta^L.
@@ -35,6 +36,7 @@ $$
 * 对 $\color{red}{\beta^R}$, 需要满足 $R_3\oplus R_4=\beta^R$:
 
   用 $G_3,G_4$ 分别表示右侧两条路径的左侧输入, 因为右侧的路径是由反向 (自下而上) 传播过来的. 由: 
+  
 $$
 \begin{aligned}
 &R^3=F(L^1 \oplus \gamma^R) \oplus G^3\\
