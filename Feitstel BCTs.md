@@ -27,7 +27,6 @@ Some information and knowledge about Feistel BCTs
 现在分别考虑在 ③ ④ 上分别**满足**差分 $\beta^L$ 和 $\beta^R$:
 
 * 对 $\beta^L$, 需要满足 $L_3\oplus L_4=\beta^L$, 这个推导是直接的, 不需要额外的条件:
-* 
 $$
 L^3 \oplus L^4 = (L^3 \oplus L^1) \oplus (L^1 \oplus L^2) \oplus (L^2 \oplus L^4)
 = \gamma^R \oplus \beta^L \oplus \gamma^R = \beta^L.
@@ -45,10 +44,10 @@ $$
 &G^4=F(L^1 \oplus \beta^L) \oplus (R^1 \oplus \beta^R) \oplus \gamma^L
 \end{aligned} 
 $$
-  
+
 
   可进行如下推导: 
-  
+
 $$
 \begin{aligned}
 R^3 \oplus R^4 &= F(L^1 \oplus \gamma^R) \oplus G^3 \oplus F(L^1 \oplus \gamma^R \oplus \beta^L) \oplus G^4 \\
@@ -56,9 +55,9 @@ R^3 \oplus R^4 &= F(L^1 \oplus \gamma^R) \oplus G^3 \oplus F(L^1 \oplus \gamma^R
 &= \left[F(L^1 \oplus \gamma^R) \oplus F(L^1) \oplus F(L^1 \oplus \gamma^R \oplus \beta^L) \oplus F(L^1 \oplus \beta^L)\right] \oplus \beta^R.
 \end{aligned}
 $$
-  
+
   所以为了让 $R^3\oplus R^4=\beta^R$, 上式最后一行需要满足以下关系:
-  
+
 $$
 F(L^1) \oplus F(L^1 \oplus \gamma^R) \oplus F(L^1 \oplus \beta^L) \oplus F(L^1 \oplus \gamma^R \oplus \beta^L) = 0.
 $$
@@ -69,4 +68,13 @@ $$
 S(x) \oplus S(x \oplus \Delta_i) \oplus S(x \oplus \nabla_o) \oplus S(x \oplus \Delta_i \oplus \nabla_o) = 0.
 $$
 
+**注意:** 这里 $\beta^L$ 和 $\gamma^R$ 都是 Sbox 输入端的差分, 即 $\beta^L$ 是第 r 轮的左侧输入差分, $\gamma^R$ 是第 r+1 轮的右侧输入差分.
+
+而这里连接的概率为:
+$$
+2^{-n} \times \#\{x \in \mathbb{F}_2^n \mid S(x) \oplus S(x \oplus \Delta_i) \oplus S(x \oplus \nabla_o) \oplus S(x \oplus \Delta_i \oplus \nabla_o) = 0\}.
+$$
+最终 FBCT 的定义为:
+
+<img width="990" height="131" alt="image" src="https://github.com/user-attachments/assets/1dc37d27-18a2-45b6-97d1-9d8a437316dc" />
 
