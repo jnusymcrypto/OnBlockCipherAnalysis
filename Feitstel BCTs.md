@@ -27,6 +27,7 @@ Some information and knowledge about Feistel BCTs
 现在分别考虑在 ③ ④ 上分别**满足**差分 $\beta^L$ 和 $\beta^R$:
 
 * 对 $\beta^L$, 需要满足 $L_3\oplus L_4=\beta^L$, 这个推导是直接的, 不需要额外的条件:
+
 $$
 L^3 \oplus L^4 = (L^3 \oplus L^1) \oplus (L^1 \oplus L^2) \oplus (L^2 \oplus L^4)
 = \gamma^R \oplus \beta^L \oplus \gamma^R = \beta^L.
